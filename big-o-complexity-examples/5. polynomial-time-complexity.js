@@ -1,4 +1,6 @@
-// O(n^2) Square/Quadratic Time Complexity
+// O(n^c) Polynomial Time Complexity
+// C = 2, Square
+// C = 3. Cubic
 
 function createMatrix(size) {
     var matrix = [];
