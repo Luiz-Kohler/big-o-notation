@@ -40,7 +40,3 @@ function partition(arr, left, right) {
 
     return i + 1;
 }
-
-const array = [34, 7, 23, 32, 5, 7, 62, 7];
-quickSort(array);
-console.log(array); 
