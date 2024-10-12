@@ -23,10 +23,15 @@ function binarySearchIterative(array, element) {
     let start = 0;
     let end = array.length - 1;
 
+    let counter = 0;
+
     while (start <= end) {
+        counter++;
+
         let mid = Math.floor((start + end) / 2);
 
         if (array[mid] == element) {
+            console.log(counter);
             return true; 
         } else
          if (array[mid] > element) {
@@ -36,11 +41,7 @@ function binarySearchIterative(array, element) {
         }
     }
 
+    console.log(counter);
+
     return false; 
 }
-
-var numbers = [1, 2, 3, 4, 5, 6, 7, 8];
-var numberToFind = 61;
-
-console.log(binarySearchRecursive(numbers, 0, numbers.length - 1, numberToFind));
-console.log(binarySearchIterative(numbers, numberToFind));

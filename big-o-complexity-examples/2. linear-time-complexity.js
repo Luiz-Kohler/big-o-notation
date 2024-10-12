@@ -43,11 +43,3 @@ function findHighestAndLowestNumber(array) {
 
     return [highest, lowest];
 }
-
-
-let number = 10;
-
-countDown(number);
-let array = createArrayOfSize(number);
-console.log(`size: ${number} array: ${array}`);
-console.log(`highest and lowest number in array: ${findHighestAndLowestNumber(array)}`);

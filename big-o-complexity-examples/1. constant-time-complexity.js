@@ -10,8 +10,3 @@ function addOneHundred(number) {
 
     return number;
 }
-
-let number = 10;
-
-console.log(`the number ${number} divided by half is ${divideByHalf(number)}`);
-console.log(`the number ${number} + 100 = ${addOneHundred(number)}`);
