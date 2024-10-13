@@ -1,4 +1,4 @@
-// O(n log n) Log Linear Time Complexity Benchmark
+// O(n log n) Log Linear Time Complexity
 import operationsCounter from '../operations-counter.js';
 
 const quickSort = (arr, left = 0, right = arr.length - 1) => {
