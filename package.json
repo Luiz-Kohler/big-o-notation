@@ -1,13 +1,16 @@
 {
   "name": "big-o-notation",
   "version": "1.0.0",
-  "main": "index.js",
-  "type": "module",
+  "main": "api.js",
+  "type": "commonjs",
   "scripts": {
-    "start": "node index.js"
+    "start": "node api.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
 }

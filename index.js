@@ -7,7 +7,6 @@ import { exponentialComplexityBenchMark } from './complexities/exponential.js';
 import { factorialComplexityBenchMark } from './complexities/factorial.js';
 import { saveReport } from './common/file-manager.js'
 
-
 const INPUT_SIZES = [1, 5, 10];
 
 const benchmarks = [
