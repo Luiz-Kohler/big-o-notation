@@ -1,5 +1,6 @@
 // O(n log n) Log Linear Time Complexity
-import operationsCounter from '../operations-counter.js';
+
+import operationsCounter from '../common/operations-counter.js';
 
 const quickSort = (arr, left = 0, right = arr.length - 1) => {
     operationsCounter.increment();
@@ -36,22 +37,12 @@ const logLinearComplexityBenchMark = (inputSizes) => {
         
         let array = Array.from({ length: n }, (_, i) => i);
 
-        const startTime = performance.now();
-        const initialMemory = process.memoryUsage().heapUsed;
-
         quickSort(array);
 
-        const endTime = performance.now();
-        const finalMemory = process.memoryUsage().heapUsed;
-
         const data = {
-            operationsCount: operationsCounter.count,
-            executionTime: endTime - startTime,
-            memoryUsage: finalMemory - initialMemory,
-            function: {
-                notation: 'O(n log n) logarithmic linear',
-                name: quickSort.name,
-            },
+            notation : 'LOG LINEAR O(n log n)',
+            inputSize: n,
+            operations: operationsCounter.get()
         };
 
         response.push(data);

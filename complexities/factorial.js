@@ -1,5 +1,5 @@
 // O(n!) Factorial Time Complexity
-import operationsCounter from '../operations-counter.js';
+import operationsCounter from '../common/operations-counter.js';
 
 const permute = (str) => {
     if (str.length === 0) 
@@ -22,6 +22,16 @@ const permute = (str) => {
     return permutations;
 };
 
+
+const createRandomString = (length) => {
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let result = '';
+    for (let i = 0; i < length; i++) {
+        result += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+    return result;
+};
+
 const factorialComplexityBenchMark = (inputSizes) => {
     const response = [];
 
@@ -29,22 +39,12 @@ const factorialComplexityBenchMark = (inputSizes) => {
         const input = createRandomString(n);
         operationsCounter.reset();
 
-        const startTime = performance.now();
-        const initialMemory = process.memoryUsage().heapUsed;
-
         permute(input);
 
-        const endTime = performance.now();
-        const finalMemory = process.memoryUsage().heapUsed;
-
         const data = {
-            operationsCount: operationsCounter.count,
-            executionTime: endTime - startTime,
-            memoryUsage: finalMemory - initialMemory,
-            function: {
-                notation: 'O(n!) factorial',
-                name: permute.name,
-            },
+            notation : 'FACTORIAL O(n!)',
+            inputSize: n,
+            operations: operationsCounter.get(),
         };
 
         response.push(data);

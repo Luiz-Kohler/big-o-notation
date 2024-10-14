@@ -1,6 +1,6 @@
 // O(n) Linear Time Complexity
 
-import operationsCounter from '../operations-counter.js';
+import operationsCounter from '../common/operations-counter.js';
 
 const createArrayOfSize = (size) => {
     let array = [];
@@ -17,22 +17,12 @@ const linearComplexityBenchMark = (inputSizes) => {
     for (let n of inputSizes) {
         operationsCounter.reset();
 
-        const startTime = performance.now();
-        const initialMemory = process.memoryUsage().heapUsed;
-
         createArrayOfSize(n);
 
-        const endTime = performance.now();
-        const finalMemory = process.memoryUsage().heapUsed;
-
         const data = {
-            operationsCount: operationsCounter.count,
-            executionTime: endTime - startTime,
-            memoryUsage: finalMemory - initialMemory,
-            function: {
-                notation: 'O(n) linear',
-                name: createArrayOfSize.name,
-            },
+            notation : 'LINEAR O(n)',
+            inputSize: n,
+            operations: operationsCounter.get(),
         };
 
         response.push(data);

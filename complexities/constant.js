@@ -1,6 +1,6 @@
 // O(1) Constant Time Complexity
 
-import operationsCounter from '../operations-counter.js';
+import operationsCounter from '../common/operations-counter.js';
 
 const addOneHundred = (input) => {
     for (let i = 1; i <= 100; i++) {
@@ -17,22 +17,13 @@ const constantComplexityBenchMark = (inputSizes) => {
 
     for(let n of inputSizes){
         operationsCounter.reset();
-
-        const startTime = performance.now(); 
-        const initialMemory = process.memoryUsage().heapUsed;
     
         addOneHundred(n);
-        const endTime = performance.now();
-        const finalMemory = process.memoryUsage().heapUsed;
         
         var data = {
-            operationsCount: operationsCounter.get(),
-            executionTime: endTime - startTime,
-            memoryUsage: finalMemory - initialMemory,
-            function: {
-                notation: 'O(1) constant',
-                name: addOneHundred.name,
-            }
+            notation : 'CONSTANT O(1)',
+            inputSize: n,
+            operations: operationsCounter.get(),
         }
 
         response.push(data);

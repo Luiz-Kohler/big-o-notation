@@ -1,0 +1,122 @@
+[
+  {
+    "notation": "CONSTANT O(1)",
+    "inputSize": 1,
+    "operations": 100
+  },
+  {
+    "notation": "CONSTANT O(1)",
+    "inputSize": 5,
+    "operations": 100
+  },
+  {
+    "notation": "CONSTANT O(1)",
+    "inputSize": 10,
+    "operations": 100
+  },
+  {
+    "notation": "LINEAR O(n)",
+    "inputSize": 1,
+    "operations": 1
+  },
+  {
+    "notation": "LINEAR O(n)",
+    "inputSize": 5,
+    "operations": 5
+  },
+  {
+    "notation": "LINEAR O(n)",
+    "inputSize": 10,
+    "operations": 10
+  },
+  {
+    "notation": "LOGARITHMIC O(log n)",
+    "inputSize": 1,
+    "operations": 1
+  },
+  {
+    "notation": "LOGARITHMIC O(log n)",
+    "inputSize": 5,
+    "operations": 2
+  },
+  {
+    "notation": "LOGARITHMIC O(log n)",
+    "inputSize": 10,
+    "operations": 3
+  },
+  {
+    "notation": "LOG LINEAR O(n log n)",
+    "inputSize": 1,
+    "operations": 1
+  },
+  {
+    "notation": "LOG LINEAR O(n log n)",
+    "inputSize": 5,
+    "operations": 9
+  },
+  {
+    "notation": "LOG LINEAR O(n log n)",
+    "inputSize": 10,
+    "operations": 19
+  },
+  {
+    "notation": "SQUARE O(n^2)",
+    "inputSize": 1,
+    "operations": 1
+  },
+  {
+    "notation": "SQUARE O(n^2)",
+    "inputSize": 5,
+    "operations": 25
+  },
+  {
+    "notation": "SQUARE O(n^2)",
+    "inputSize": 10,
+    "operations": 100
+  },
+  {
+    "notation": "CUBIC O(n^3)",
+    "inputSize": 1,
+    "operations": 1
+  },
+  {
+    "notation": "CUBIC O(n^3)",
+    "inputSize": 5,
+    "operations": 125
+  },
+  {
+    "notation": "CUBIC O(n^3)",
+    "inputSize": 10,
+    "operations": 1000
+  },
+  {
+    "notation": "EXPONENTIAL O(2^n)",
+    "inputSize": 1,
+    "operations": 2
+  },
+  {
+    "notation": "EXPONENTIAL O(2^n)",
+    "inputSize": 5,
+    "operations": 32
+  },
+  {
+    "notation": "EXPONENTIAL O(2^n)",
+    "inputSize": 10,
+    "operations": 1024
+  },
+  {
+    "notation": "FACTORIAL O(n!)",
+    "inputSize": 1,
+    "operations": 1
+  },
+  {
+    "notation": "FACTORIAL O(n!)",
+    "inputSize": 5,
+    "operations": 600
+  },
+  {
+    "notation": "FACTORIAL O(n!)",
+    "inputSize": 10,
+    "operations": 36288000
+  }
+]

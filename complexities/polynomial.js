@@ -2,7 +2,7 @@
 // C = 2, Square
 // C = 3. Cubic
 
-import operationsCounter from '../operations-counter.js';
+import operationsCounter from '../common/operations-counter.js';
 
 function createMatrix(size) {
     var matrix = [];
@@ -64,22 +64,12 @@ const polynomialSquareComplexityBenchMark = (inputSizes) => {
     for (let n of inputSizes) {
         operationsCounter.reset();
 
-        const startTime = performance.now();
-        const initialMemory = process.memoryUsage().heapUsed;
-
         createMatrix(n);
 
-        const endTime = performance.now();
-        const finalMemory = process.memoryUsage().heapUsed;
-
         const data = {
-            operationsCount: operationsCounter.count,
-            executionTime: endTime - startTime,
-            memoryUsage: finalMemory - initialMemory,
-            function: {
-                notation: 'O(n^2) polynomial square',
-                name: createMatrix.name,
-            },
+            notation : 'SQUARE O(n^2)',
+            inputSize: n,
+            operations: operationsCounter.get(),
         };
 
         response.push(data);
@@ -94,22 +84,12 @@ const polynomialCubicComplexityBenchMark = (inputSizes) => {
     for (let n of inputSizes) {
         operationsCounter.reset();
 
-        const startTime = performance.now();
-        const initialMemory = process.memoryUsage().heapUsed;
-
         createCube(n);
 
-        const endTime = performance.now();
-        const finalMemory = process.memoryUsage().heapUsed;
-
         const data = {
-            operationsCount: operationsCounter.count,
-            executionTime: endTime - startTime,
-            memoryUsage: finalMemory - initialMemory,
-            function: {
-                notation: 'O(n^2) polynomial cubic',
-                name: createMatrix.name,
-            },
+            notation : 'CUBIC O(n^3)',
+            inputSize: n,
+            operations: operationsCounter.get(),
         };
 
         response.push(data);

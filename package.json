@@ -1,5 +1,13 @@
 {
-  "dependencies": {
-    "benchmark": "^2.1.4"
-  }
+  "name": "big-o-notation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }

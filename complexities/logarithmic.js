@@ -1,5 +1,5 @@
 // O(log n) Logarithmic Time Complexity
-import operationsCounter from '../operations-counter.js';
+import operationsCounter from '../common/operations-counter.js';
 
 function binarySearchRecursive(array, start, end, element) {
     operationsCounter.increment();
@@ -50,22 +50,12 @@ const logarithmicComplexityBenchMark = (inputSizes) => {
         let array = Array.from({ length: n }, (_, i) => i);
         const elementToSearch = array[0];
 
-        const startTime = performance.now();
-        const initialMemory = process.memoryUsage().heapUsed;
-
         binarySearchIterative(array, elementToSearch);
 
-        const endTime = performance.now();
-        const finalMemory = process.memoryUsage().heapUsed;
-
         const data = {
-            operationsCount: operationsCounter.count,
-            executionTime: endTime - startTime,
-            memoryUsage: finalMemory - initialMemory,
-            function: {
-                notation: 'O(log n) logarithmic',
-                name: binarySearchIterative.name,
-            },
+            notation : 'LOGARITHMIC O(log n)',
+            inputSize: n,
+            operations: operationsCounter.get(),
         };
 
         response.push(data);

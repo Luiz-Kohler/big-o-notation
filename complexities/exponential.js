@@ -1,38 +1,43 @@
 // O(c^n) Exponential Time Complexity
 
-import operationsCounter from '../operations-counter.js';
+import operationsCounter from '../common/operations-counter.js';
 
-const fibonacci = (input) => {
-    operationsCounter.increment();
-
-    if (input <= 1) 
-        return input;
+function generatePowerSet(set) {
+    const powerSet = [];
     
-    return fibonacci(input - 1) + fibonacci(input - 2);
+    function backtrack(currentSet, index) {
+        if (index === set.length) {
+            operationsCounter.increment();
+            powerSet.push([...currentSet]);
+            return;
+        }
+        
+        backtrack(currentSet, index + 1);
+        
+        currentSet.push(set[index]);
+        backtrack(currentSet, index + 1);
+        
+        currentSet.pop();
+    }
+    
+    backtrack([], 0);
+    return powerSet;
 }
 
 const exponentialComplexityBenchMark = (inputSizes) => {
     const response = [];
 
     for (let n of inputSizes) {
+        let array = Array.from({ length: n }, (_, i) => i);
+
         operationsCounter.reset();
 
-        const startTime = performance.now();
-        const initialMemory = process.memoryUsage().heapUsed;
-
-        fibonacci(n);
-
-        const endTime = performance.now();
-        const finalMemory = process.memoryUsage().heapUsed;
+        generatePowerSet(array);
 
         const data = {
-            operationsCount: operationsCounter.count,
-            executionTime: endTime - startTime,
-            memoryUsage: finalMemory - initialMemory,
-            function: {
-                notation: 'O(c^n)exponential',
-                name: fibonacci.name,
-            },
+            notation : 'EXPONENTIAL O(2^n)',
+            inputSize: n,
+            operations: operationsCounter.get(),
         };
 
         response.push(data);
