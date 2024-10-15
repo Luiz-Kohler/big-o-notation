@@ -1,4 +1,3 @@
-
 # Big O Notation
 
 ## What is it?
@@ -154,6 +153,12 @@ Constant time complexity does not change the space or time required to execute, 
         return permutations;
     };
   ```
+
+  ## how much does the growth of the input size increases the number of operations?
+
+  Here a graph from FreeCodeCamp answering that question in the easily way possible. 
+  
+  ![image](https://github.com/user-attachments/assets/69ccd4d0-3b2e-498d-a5fb-a9abc43de867)
 
   ## API
   With that in mind I decide to create a simple api in node js using express, with just one endpoint.
