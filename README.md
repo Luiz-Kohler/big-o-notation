@@ -25,7 +25,7 @@ Constant time complexity does not change the space or time required to execute, 
 
         return input;
     }
-    ```
+  ```
 
 
 - **Linear O(n)**
@@ -42,7 +42,7 @@ Constant time complexity does not change the space or time required to execute, 
 
         return array;
     };
-  ```
+    ```
  
 - **Logaritmic O(log n)**
     In logarithmic time complexity, the number of operations increases logarithmically with respect to the input size. Here's an example:
