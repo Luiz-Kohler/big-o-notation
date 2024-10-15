@@ -1,10 +1,10 @@
 # Big O Notation
 
 ## What is it?
-It's a method used to measure the efficiency of an algorithim based on how much time and space are required as the input size grows. For that reason, we have different notations to classify it.
+It's a method used to measure the efficiency of an algorithm based on how much time and space are required as the input size grows. For that reason, we have different notations to classify it.
 
 ## How does it work?
-Big O notation basically works by calculating the worst case of your algorothim, analyzing the time and space necessary to run it, and how the input size affect that, how much time and space will be necessary if your input size increases. 
+Big O notation basically works by calculating the worst case of your algorithm, analyzing the time and space necessary to run it, and how the input size affect that, how much time and space will be necessary if your input size increases. 
 
 ## Why is important?
 With that knowledge, we are able to create more efficient algorithms that support a massive scale of data. We can even refactor existing algorithms to make them consume less time and space to execute, performing better and doing the same thing.
@@ -43,7 +43,7 @@ Constant time complexity does not change the space or time required to execute, 
     };
     ```
  
-- **Logaritmic O(log n)**
+- **Logarithmic O(log n)**
     In logarithmic time complexity, the number of operations increases logarithmically with respect to the input size. Here's an example:
   ```js
     const binarySearchRecursive = (array, start, end, element) => {
@@ -154,7 +154,7 @@ Constant time complexity does not change the space or time required to execute, 
     };
   ```
 
-  ## how much does the growth of the input size increases the number of operations?
+  ## How much does the growth of the input size increases the number of operations?
 
   Here a graph from FreeCodeCamp answering that question in the easily way possible. 
   
