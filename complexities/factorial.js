@@ -22,7 +22,6 @@ const permute = (str) => {
     return permutations;
 };
 
-
 const createRandomString = (length) => {
     const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     let result = '';

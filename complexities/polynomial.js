@@ -1,10 +1,10 @@
 // O(n^c) Polynomial Time Complexity
-// C = 2, Square
+// C = 2, Quadratic
 // C = 3. Cubic
 
 import operationsCounter from '../common/operations-counter.js';
 
-function createMatrix(size) {
+const createMatrix = (size) => {
     var matrix = [];
     for (let column = 0; column < size; column++) {
         matrix[column] = [];
@@ -18,7 +18,7 @@ function createMatrix(size) {
     return matrix;
 }
 
-function createCube(size) {
+const createCube = (size) => {
     var matrix = [];
     for (let column = 0; column < size; column++) {
         matrix[column] = [];
@@ -35,7 +35,7 @@ function createCube(size) {
     return matrix;
 }
 
-function bubbleSort(arr) {
+const bubbleSort = (arr) => {
     let n = arr.length;
     let swapped; 
 
@@ -67,7 +67,7 @@ const polynomialSquareComplexityBenchMark = (inputSizes) => {
         createMatrix(n);
 
         const data = {
-            notation : 'SQUARE O(n^2)',
+            notation : 'QUADRATIC O(n^2)',
             inputSize: n,
             operations: operationsCounter.get(),
         };

@@ -4,10 +4,12 @@ import operationsCounter from '../common/operations-counter.js';
 
 const createArrayOfSize = (size) => {
     let array = [];
+
     for (let i = 1; i <= size; i++) {
         operationsCounter.increment();
         array.push(i);
     }
+
     return array;
 };
 

@@ -1,7 +1,7 @@
 // O(log n) Logarithmic Time Complexity
 import operationsCounter from '../common/operations-counter.js';
 
-function binarySearchRecursive(array, start, end, element) {
+const binarySearchRecursive = (array, start, end, element) => {
     operationsCounter.increment();
 
     if (start > end) 

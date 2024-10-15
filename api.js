@@ -43,7 +43,7 @@ app.get("/status", (req, res) => {
 
     operations = operations.map(op => ({
         type: op.type,
-        operations: Math.floor(op.operations)
+        operations: Math.ceil(op.operations)
     }));
 
     res.json({
