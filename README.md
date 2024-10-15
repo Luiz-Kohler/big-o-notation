@@ -13,7 +13,6 @@ With that knowledge, we are able to create more efficient algorithms that suppor
 Here some examples of notations, explaing each one of them:
 
 - **Constant O(1)**
-
 Constant time complexity does not change the space or time required to execute, regardless of the input size. In the example below, the number of operations is always the same, whether the input size is one or one thousand.
   ```js
     const addOneHundred = (input) => {
